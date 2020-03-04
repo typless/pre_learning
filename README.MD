@@ -10,7 +10,7 @@ So for every row in database one request is should be done.
 4. Create a new document type named _pre-training-example_:
     * Click on the __Documents__ tab in the side navigation bar
     * Click on the __+New__ button
-    * For the _name_ set "__example__"
+    * For the _name_ set "__pre-training-example__"
     * For the _OCR language_ select "__English__"
     * Click on the __Next__ button
     * Leave fields as they are and click on the __Confirm__ button 
