@@ -15,7 +15,7 @@ So for every row in database one request is should be done.
     * Click on the __Next__ button
     * Leave fields as they are and click on the __Confirm__ button 
     
-5. Get code of the example Django project from [__this__](https://github.com/typless/continuous_learning) Github repository.
+5. Get code of the example project from [__this__](https://github.com/typless/continuous_learning) Github repository.
     ```bash
     git clone https://github.com/typless/continuous_learning.git
     ```
