@@ -141,5 +141,4 @@ dmypy.json
 .pytype/
 mediafiles/*
 
-examples/examples.db
-examples/examples.db-journal
+examples/*-journal
