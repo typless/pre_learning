@@ -1,3 +1,4 @@
+import json
 import os
 import sqlite3
 
@@ -22,12 +23,14 @@ for row in rows:
     request_data = {
         "document_type_name": 'pre-learning-example',
         "customer": 'me',
-        "learning_fields": [
-            {'name': 'supplier', 'value': row['supplier']},
-            {'name': 'invoice_number', 'value': row['invoice_number']},
-            {'name': 'issue_date', 'value': row['issue_date']},  # convert to YYYY-MM-DD string if your database has datetime type
-            {'name': 'total_amount', 'value': '%.2f' % row['total_amount']},
-        ]
+        "learning_fields": json.dumps(
+            [
+                {'name': 'supplier', 'value': row['supplier']},
+                {'name': 'invoice_number', 'value': row['invoice_number']},
+                {'name': 'issue_date', 'value': row['issue_date']},  # convert to YYYY-MM-DD string if your database has datetime type
+                {'name': 'total_amount', 'value': '%.2f' % row['total_amount']},
+            ]
+        )
     }
     if os.getenv('API_KEY') is None:
         raise Exception('YOU MUST SET API KEY!')
